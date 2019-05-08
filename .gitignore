@@ -1,0 +1,9 @@
+.vs/
+bin/
+obj/
+
+*.csproj.user
+*.sln.cache
+*.suo
+StyleCop.[Cc]ache
+TestResults/
