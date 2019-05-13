@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cli", "Cli.csproj", "{A18A28BD-78E5-4DA9-9F18-7D8582D7A5EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gridcoin", "..\..\src\Gridcoin.csproj", "{AEE86E4A-C48B-4099-8EEF-5EDF100C40EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A18A28BD-78E5-4DA9-9F18-7D8582D7A5EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A18A28BD-78E5-4DA9-9F18-7D8582D7A5EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A18A28BD-78E5-4DA9-9F18-7D8582D7A5EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A18A28BD-78E5-4DA9-9F18-7D8582D7A5EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEE86E4A-C48B-4099-8EEF-5EDF100C40EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEE86E4A-C48B-4099-8EEF-5EDF100C40EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEE86E4A-C48B-4099-8EEF-5EDF100C40EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEE86E4A-C48B-4099-8EEF-5EDF100C40EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0636591-C425-421A-A3BE-CE4A7C795007}
+	EndGlobalSection
+EndGlobal
