@@ -20,48 +20,54 @@ namespace Cli
             // to enable the RPC server.
             var client = new GridcoinClient(
                 "127.0.0.1",
-                "gridcoinrpc", // rpcuser from gridcoinresearch.conf
-                "password");   // rpcpassword from gridcoinresearch.conf
+                "kozak", // rpcuser from gridcoinresearch.conf
+                "rhgwck");   // rpcpassword from gridcoinresearch.conf
+            string command = "";
+            while (!command.Equals("exit"))
+            {
+                try
+                {
+                    //ServerInfo info = await client.GetInfo();
 
-            try
-            {
-                ServerInfo info = await client.GetInfo();
+                    //Console.Write("Version: ");
+                    //Console.WriteLine(info.Version);
+                    //Console.Write("Balance: ");
+                    //Console.WriteLine(info.Balance);
 
-                Console.Write("Version: ");
-                Console.WriteLine(info.Version);
-                Console.Write("Balance: ");
-                Console.WriteLine(info.Balance);
+                    Console.Write("Command: ");
+                    command = Console.ReadLine();
+                    await client.ExecuteCommand(command);
+                    //long height = await client.GetBlockCount();
 
-                long height = await client.GetBlockCount();
-
-                Console.Write("Height:  ");
-                Console.WriteLine(height);
-            }
-            catch (IOException e)
-            {
-                Console.Write("Network error: ");
-                Console.WriteLine(e.Message);
-            }
-            catch (HttpRequestException e)
-            {
-                Console.Write("Request error: ");
-                Console.WriteLine(e.Message);
-            }
-            catch (SerializationException e)
-            {
-                Console.Write("Serialization format error: ");
-                Console.WriteLine(e.Message);
-            }
-            catch (RpcException e)
-            {
-                Console.Write("RPC error: Code: ");
-                Console.WriteLine(e.Code);
-                Console.WriteLine(e.Message);
-            }
-            catch (Exception e)
-            {
-                Console.Write("Unknown error: ");
-                Console.WriteLine(e);
+                    //Console.Write("Height:  ");
+                    //Console.WriteLine(height);
+                }
+                catch (IOException e)
+                {
+                    Console.Write("Network error: ");
+                    Console.WriteLine(e.Message);
+                }
+                catch (HttpRequestException e)
+                {
+                    Console.Write("Request error: ");
+                    Console.WriteLine(e.Message);
+                }
+                catch (SerializationException e)
+                {
+                    Console.Write("Serialization format error: ");
+                    Console.WriteLine(e.Message);
+                }
+                catch (RpcException e)
+                {
+                    Console.Write("RPC error: Code: ");
+                    Console.WriteLine(e.Code);
+                    Console.WriteLine(e.Message);
+                }
+                catch (Exception e)
+                {
+                    Console.Write("Unknown error: ");
+                    Console.WriteLine(e);
+                }
             }
         }
     }

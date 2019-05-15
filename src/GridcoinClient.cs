@@ -82,10 +82,7 @@ namespace Gridcoin
             return await this.Execute<long>("getblockcount");
         }
 
-
         // TODO: fill out the remaining RPC methods.
-
-
         /// <summary>
         /// Execute the specified RPC method, converting any RPC errors into
         /// exceptions.
@@ -114,6 +111,11 @@ namespace Gridcoin
             }
 
             return response.Result;
+        }
+
+        public async Task ExecuteCommand(string request)
+        {
+            await rpc.ExecuteCommand(request);
         }
     }
 }

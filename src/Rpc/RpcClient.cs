@@ -99,8 +99,29 @@ namespace Gridcoin.Rpc
             {
                 response.EnsureSuccessStatusCode();
             }
-
+            Console.WriteLine(response);
             return await this.Deserialize<T>(response);
+        }
+
+        /// <summary>
+        /// NEW
+        /// </summary>
+        /// <param name="request"></param>
+        public async Task ExecuteCommand(string command)
+        {
+            var bytes = new ByteArrayContent((new Request(command)).Serialize());
+
+            var response = await this.http.PostAsync(string.Empty, bytes);
+
+            if (response.StatusCode == HttpStatusCode.InternalServerError)
+            {
+                Console.WriteLine(await response.Content.ReadAsStringAsync());
+            }
+            else
+            {
+                response.EnsureSuccessStatusCode();
+            }
+            Console.WriteLine(await response.Content.ReadAsStringAsync());
         }
 
         /// <summary>
