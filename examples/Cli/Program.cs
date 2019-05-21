@@ -21,7 +21,7 @@ namespace Cli
             var client = new GridcoinClient(
                 "127.0.0.1",
                 "kozak", // rpcuser from gridcoinresearch.conf
-                "xxxxxx");   // rpcpassword from gridcoinresearch.conf
+                "test123");   // rpcpassword from gridcoinresearch.conf
             string command = "";
             while (!command.Equals("exit"))
             {

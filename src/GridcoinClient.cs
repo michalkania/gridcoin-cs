@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using Gridcoin.CommandObjects;
 using Gridcoin.Rpc;
 
 namespace Gridcoin

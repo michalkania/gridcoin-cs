@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Gridcoin
+namespace Gridcoin.CommandObjects
 {
     [DataContract]
     public class ServerInfo

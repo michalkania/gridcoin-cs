@@ -1,7 +1,6 @@
 using System;
 using System.Runtime.Serialization;
-using Gridcoin.Rpc;
-
+    
 namespace Gridcoin
 {
     /// <summary>

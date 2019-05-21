@@ -121,7 +121,15 @@ namespace Gridcoin.Rpc
             {
                 response.EnsureSuccessStatusCode();
             }
-            Console.WriteLine(await response.Content.ReadAsStringAsync());
+
+            var respString = await response.Content.ReadAsStringAsync();
+
+            //dynamic data = Newtonsoft.Json.JsonConvert.DeserializeObject(respString);
+            //foreach (var prop in data)
+            //{
+            //    Console.WriteLine(prop);
+            //}
+            Console.WriteLine(respString);
         }
 
         /// <summary>
